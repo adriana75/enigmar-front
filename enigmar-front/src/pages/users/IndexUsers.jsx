@@ -84,6 +84,42 @@ const IndexUsers = () => {
           </tbody>
         </table>
 
+        <br/><br/>
+        Datos Usuarios Pendientes:
+        <table>
+          <thead>
+            <tr>
+              <th>email</th>
+              <th>Identificación</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Rol</th>
+              <th>Estado</th>
+              <th>Contraseña</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data && data.Pending ? (
+              <>
+                {data.Pending.map((pe) => {
+                  return (
+                    <tr key={pe._id}>
+                      <td>{pe.email}</td>
+                      <td>{pe.documentId}</td>
+                      <td>{pe.name}</td>
+                      <td>{pe.lastName}</td>
+                      <td>{pe.role}</td>
+                      <td>{pe.status}</td>
+                      <td>{pe.password}</td>
+                    </tr>
+                  );
+                })}
+              </>
+            ) : (
+              <div>No autorizado</div>
+            )}
+          </tbody>
+        </table>
       </div>
     )
 }

@@ -25,6 +25,17 @@ const GET_USUARIOS = gql `
             status
             password
         }
+
+        Pending {
+            _id
+            email
+            documentId
+            name
+            lastName
+            role
+            status
+            password
+        }
     }
 `;
 
