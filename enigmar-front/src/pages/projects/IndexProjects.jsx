@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client'
 import { GET_PROYECTOS } from '../../graphql/projects/queries';
+import { GET_AVANCES } from '../../graphql/advances/queries';
 
 const IndexProjects = () => {
 
@@ -22,7 +23,9 @@ const IndexProjects = () => {
               <th>Presupuesto</th>
               <th>Fecha de Inicio</th>
               <th>Fecha Final</th>
-              <th>Líder</th>
+              <th>Nombre del Líder</th>
+              <th>Apellido del Líder</th>
+              <th>Rol</th>
               <th>Estado</th>
               <th>Fase</th>
               <th>Avances</th>
@@ -41,9 +44,11 @@ const IndexProjects = () => {
                       <td>{p.startDate}</td>
                       <td>{p.endDate}</td>
                       <td>{p.leader_id.name}</td>
+                      <td>{p.leader_id.lastName}</td>
+                      <td>{p.leader_id.role}</td>
                       <td>{p.status}</td>
                       <td>{p.phase}</td>
-                      <td>{p.advances.description}</td>  
+                      <td>{p.advances._id}</td>  
                     </tr>
                   );
                 })}

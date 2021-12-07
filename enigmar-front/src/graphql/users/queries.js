@@ -13,6 +13,18 @@ const GET_USUARIOS = gql `
         status
         password
         }
+
+        Students {
+            _id
+            email
+            documentId
+            name
+            lastName
+            fullName
+            role
+            status
+            password
+        }
     }
 `;
 
