@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Index from './pages/usuarios/Index' 
+import IndexU from './pages/users/IndexUsers' 
+import IndexP from './pages/projects/IndexProjects'
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 
 //const httpLink = createHttpLink({
@@ -17,7 +18,7 @@ function App() {
     <ApolloProvider client={client}>
       <BrowserRouter>
         <Routes>
-          <Route path='' element={<Index />}/>
+          <Route path='' element={<IndexP />}/>
         </Routes>
       </BrowserRouter>
     </ApolloProvider> 

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client'
-import { GET_USUARIOS } from '../../graphql/usuarios/queries'
+import { GET_USUARIOS } from '../../graphql/users/queries'
 
-const Index = () => {
+const IndexUsers = () => {
 
     const { data, error, loading } = useQuery(GET_USUARIOS);
     useEffect(() => {
@@ -51,4 +51,4 @@ const Index = () => {
     )
 }
 
-export default Index
+export default IndexUsers
