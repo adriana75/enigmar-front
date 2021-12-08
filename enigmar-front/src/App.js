@@ -20,7 +20,7 @@ function App() {
     <ApolloProvider client={client}>
       <BrowserRouter>
         <Routes>
-          <Route path='' element={<IndexU />}/>
+          <Route path='' element={<IndexE />}/>
         </Routes>
       </BrowserRouter>
     </ApolloProvider> 

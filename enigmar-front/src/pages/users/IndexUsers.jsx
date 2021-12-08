@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useQuery } from '@apollo/client'
+import { useQuery, useMutation } from '@apollo/client'
 import { GET_USUARIOS } from '../../graphql/users/queries'
+import { EDITAR_USUARIO } from '../../graphql/users/mutations'
 
 const IndexUsers = () => {
 
@@ -23,6 +24,7 @@ const IndexUsers = () => {
               <th>Rol</th>
               <th>Estado</th>
               <th>Contraseña</th>
+              <th>Editar</th>
             </tr>
           </thead>
           <tbody>

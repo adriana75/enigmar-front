@@ -16,8 +16,8 @@ const IndexEnrollments = () => {
         <table>
           <thead>
             <tr>
-              <th>Proyecto</th>
-              <th>Usuario</th>
+              <th>Nombre del Proyecto</th>
+              <th>Nombre del Usuarios</th>
               <th>Estado</th>
               <th>Fecha de Inscripción</th>
               <th>Fecha Final</th>
@@ -29,8 +29,8 @@ const IndexEnrollments = () => {
                 {data.Enrollments.map((e) => {
                   return (
                     <tr key={e._id}>
-                      <td>{e.project_id}</td>
-                      <td>{e.user_id}</td>
+                      <td>{e.project_id.name}</td>
+                      <td>{e.user_id.name}</td>
                       <td>{e.status}</td>
                       <td>{e.enrollmentDate}</td>
                       <td>{e.egressDate}</td>  
