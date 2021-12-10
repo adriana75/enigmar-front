@@ -39,4 +39,18 @@ const GET_USUARIOS = gql `
     }
 `;
 
-export {GET_USUARIOS};
+const GET_USUARIO = gql `
+    query Query($id: String!) {
+        User(_id: $_id) {
+        _id
+        name
+        lastName
+        email
+        status
+        documentId
+        role
+        }
+    }
+`;
+
+export {GET_USUARIOS, GET_USUARIO};

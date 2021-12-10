@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useQuery, useMutation } from '@apollo/client'
+import { useQuery } from '@apollo/client'
 import { GET_USUARIOS } from '../../graphql/users/queries'
-import { EDITAR_USUARIO } from '../../graphql/users/mutations'
+import { Enum_Role, Enum_statusUser } from '../../utils/enums';
+
 
 const IndexUsers = () => {
 
@@ -37,9 +38,14 @@ const IndexUsers = () => {
                       <td>{u.documentId}</td>
                       <td>{u.name}</td>
                       <td>{u.lastName}</td>
-                      <td>{u.role}</td>
-                      <td>{u.status}</td>
+                      <td>{Enum_Role[u.role]}</td>
+                      <td>{Enum_statusUser[u.status]}</td>
                       <td>{u.password}</td>
+                      <td>
+                        <Link to={`/usuarios/editar/${u._id}`}>
+                          Aquí
+                        </Link>
+                      </td>
                     </tr>
                   );
                 })}
