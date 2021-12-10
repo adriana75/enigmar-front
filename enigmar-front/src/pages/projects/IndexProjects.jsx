@@ -48,7 +48,7 @@ const IndexProjects = () => {
                       <td>{p.leader_id.role}</td>
                       <td>{p.status}</td>
                       <td>{p.phase}</td>
-                      <td>{p.advances.description}</td>  
+                      <td>{JSON.stringify(p.advances)}</td>
                     </tr>
                   );
                 })}

@@ -19,8 +19,6 @@ const GET_PROYECTOS = gql `
       status
       phase
       advances {
-        _id
-        addDate
         description
         observations
       }
