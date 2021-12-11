@@ -1,15 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useQuery } from "@apollo/client";
+import { useQuery, useMutation } from "@apollo/client";
 import { GET_PROYECTOS } from "../../graphql/projects/queries";
 import { GET_AVANCES } from "../../graphql/advances/queries";
+import { EDITAR_PROYECTO } from "../../graphql/projects/mutations";
 import { Table, Container, Button, Image, Row, Figure } from "react-bootstrap";
+import useFormData from '../../hooks/useFormData';
+import { Enum_statusProject } from "../../utils/enums";
+import DropDown  from '../../components/Dropdown';
+import ButtonLoading from '../../components/ButtonLoading'
 
 const IndexProjects = () => {
-  const { data, error, loading } = useQuery(GET_PROYECTOS);
+
+  const { data: queryData, error, loading } = useQuery(GET_PROYECTOS);
   useEffect(() => {
-    console.log("data servidor", data);
-  }, [data]);
+    console.log("data servidor", queryData);
+  }, [queryData]);
 
   return (
     <Row>
@@ -30,12 +36,13 @@ const IndexProjects = () => {
             <th>Estado</th>
             <th>Fase</th>
             <th>Avances</th>
+            <th>Editar</th>
           </tr>
         </thead>
         <tbody>
-          {data && data.Projects ? (
+          {queryData && queryData.Projects ? (
             <>
-              {data.Projects.map((p) => {
+              {queryData.Projects.map((p) => {
                 return (
                   <tr key={p._id}>
                     <td>{p.name}</td>
@@ -50,6 +57,10 @@ const IndexProjects = () => {
                     <td>{p.status}</td>
                     <td>{p.phase}</td>
                     <td>{JSON.stringify(p.advances)}</td>
+                    <td>
+                    <FormEditProyecto _id={p._id} />
+                    </td>
+
                   </tr>
                 );
               })}
@@ -60,6 +71,40 @@ const IndexProjects = () => {
         </tbody>
       </Table>
     </Row>
+  );
+};
+
+const FormEditProyecto = ({ _id }) => {
+  const { form, formData, updateFormData } = useFormData();
+  const [editarProyecto, { data: dataMutation, loading, error }] = useMutation(EDITAR_PROYECTO);
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    editarProyecto({
+      variables: {
+        _id,
+        status:formData,
+      },
+    });
+  };
+
+  useEffect(() => {
+    console.log('data mutation', dataMutation);
+  }, [dataMutation]);
+
+  return (
+    <div className='p-4'>
+      <h1 className='font-bold'>Estado</h1>
+      <form
+        ref={form}
+        onChange={updateFormData}
+        onSubmit={submitForm}
+        className='flex flex-col items-center'
+      >
+        <DropDown name='status' options={Enum_statusProject} />
+        <ButtonLoading disabled={false} loading={loading} text='Confirmar' />
+      </form>
+    </div>
   );
 };
 
