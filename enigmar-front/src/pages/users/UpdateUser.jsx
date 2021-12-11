@@ -72,38 +72,38 @@ const UpdateUser = () => {
           label='Nombre de la persona:'
           type='text'
           name='nombre'
-          defaultValue={queryData}
+          defaultValue={queryData.User.name}
           required={true}
         />
         <Input
           label='Apellido de la persona:'
           type='text'
           name='apellido'
-          defaultValue={queryData}
+          defaultValue={queryData.User.lastName}
           required={true}
         />
         <Input
           label='Correo de la persona:'
           type='email'
           name='correo'
-          defaultValue={queryData}
+          defaultValue={queryData.User.email}
           required={true}
         />
         <Input
           label='Identificación de la persona:'
           type='text'
           name='identificacion'
-          defaultValue={queryData}
+          defaultValue={queryData.User.documentId}
           required={true}
         />
         <DropDown
           label='Estado de la persona:'
           name='estado'
-          defaultValue={queryData}
+          defaultValue={queryData.User.status}
           required={true}
           options={Enum_statusUser}
         />
-        <span>Rol del usuario: {queryData}</span>
+        <span>Rol del usuario: {queryData.User.role}</span>
         <ButtonLoading
           disabled={Object.keys(formData).length === 0}
           loading={mutationLoading}

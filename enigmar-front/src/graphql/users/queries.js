@@ -40,7 +40,7 @@ const GET_USUARIOS = gql `
 `;
 
 const GET_USUARIO = gql `
-    query Query($id: String!) {
+    query Query($_id: String!) {
         User(_id: $_id) {
         _id
         name
