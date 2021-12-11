@@ -19,7 +19,7 @@ const UpdateAdvances = () => {
         error: queryError,
         loading: queryLoading,
     } = useQuery(GET_ADVANCE, {
-        variables: {_id},
+        variables: {id: _id},
     });
 
     useEffect(() => {
@@ -60,7 +60,7 @@ const UpdateAdvances = () => {
         <Link to='/avances'>
             <i className='fas fa-arrow-left text-gray-600 cursor-pointer font-bold text-xl hover:text-gray-900' />
         </Link>
-        <h1 className='m-4 text-3xl text-gray-800 font-bold text-center'>Editar Usuario</h1>
+        <h1 className='m-4 text-3xl text-gray-800 font-bold text-center'>Editar Avance</h1>
         <form
             onSubmit={submitForm}
             onChange={updateFormData}
@@ -84,8 +84,8 @@ const UpdateAdvances = () => {
             <DropDown
             label='Observaciones:'
             name='observations'
+            options = {queryData.Advance.observations}
             defaultValue={queryData.Advance.observations}
-            required={true}
             />
             
             <ButtonLoading
