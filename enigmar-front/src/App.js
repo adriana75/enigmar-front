@@ -12,6 +12,8 @@ import {
 } from "@apollo/client";
 import UpdateUser from "./pages/users/UpdateUser";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 const httpLink = createHttpLink({
   uri: "http://localhost:4000/graphql",
@@ -26,6 +28,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/usuarios" element={<IndexU />} />
           <Route path="/proyectos" element={<IndexP />} />
@@ -33,6 +36,7 @@ function App() {
           <Route path="/avances" element={<IndexA />} />
           <Route path="/usuarios/editar/:_id" element={<UpdateUser />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </ApolloProvider>
   );

@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_INSCRIPCIONES } from "../../graphql/enrollments/queries";
 import { Table, Container, Button, Image, Row, Figure } from "react-bootstrap";
-import Footer from "../../components/Footer";
-import Navbar from "../../components/Navbar";
 
 const IndexEnrollments = () => {
   const { data, error, loading } = useQuery(GET_INSCRIPCIONES);
@@ -14,7 +12,6 @@ const IndexEnrollments = () => {
 
   return (
     <Container fluid>
-      <Navbar />
       <h2 className="text-center mt-3">Datos inscripciones</h2>
       <hr />
 
@@ -61,7 +58,6 @@ const IndexEnrollments = () => {
           )}
         </tbody>
       </Table>
-      <Footer fluid />
     </Container>
   );
 };

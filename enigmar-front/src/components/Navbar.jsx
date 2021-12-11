@@ -19,6 +19,20 @@ const NavBar = () => {
             <Link to="/" className="nav-link">
               Inicio
             </Link>
+            <Link to="/usuarios" className="nav-link">
+              {" "}
+              Usuarios
+            </Link>
+
+            <Link to="/proyectos" className="nav-link">
+              Proyectos
+            </Link>
+            <Link to="/inscripciones" className="nav-link">
+              Inscripciones
+            </Link>
+            <Link to="/avances" className="nav-link">
+              Avances
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
