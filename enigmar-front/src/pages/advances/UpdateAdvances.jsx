@@ -81,11 +81,11 @@ const UpdateAdvances = () => {
             defaultValue={queryData.Advance.description}
             required={true}
             />
-            <DropDown
+            <Input
             label='Observaciones:'
             name='observations'
-            options = {queryData.Advance.observations}
             defaultValue={queryData.Advance.observations}
+            required={true}
             />
             
             <ButtonLoading
