@@ -34,7 +34,7 @@ const UpdateUser = () => {
     e.preventDefault();
     delete formData.role;
     editarUsuario({
-      variables: { _id, ...formData },
+      variables: { id: _id, ...formData },
     });
   };
 

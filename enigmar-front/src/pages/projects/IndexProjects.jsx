@@ -82,14 +82,18 @@ const FormEditProyecto = ({ _id }) => {
     e.preventDefault();
     editarProyecto({
       variables: {
-        _id,
-        status:formData,
+        id: _id,
+        status:formData.status,
       },
     });
   };
 
   useEffect(() => {
     console.log('data mutation', dataMutation);
+    if(formData.status != undefined)
+    {
+      window.location.reload(false);
+    }
   }, [dataMutation]);
 
   return (
