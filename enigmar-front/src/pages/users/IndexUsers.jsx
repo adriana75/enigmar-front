@@ -24,7 +24,6 @@ const IndexUsers = () => {
             <th>Apellido</th>
             <th>Rol</th>
             <th>Estado</th>
-            <th>Contraseña</th>
             <th>Editar</th>
           </tr>
         </thead>
@@ -40,7 +39,6 @@ const IndexUsers = () => {
                     <td>{u.lastName}</td>
                     <td>{Enum_Role[u.role]}</td>
                     <td>{Enum_statusUser[u.status]}</td>
-                    <td>{u.password}</td>
                     <td>
                       <Link
                         to={`/usuarios/editar/${u._id}`}
@@ -124,7 +122,6 @@ const IndexUsers = () => {
                     <td>{pe.lastName}</td>
                     <td>{pe.role}</td>
                     <td>{pe.status}</td>
-                    <td>{pe.password}</td>
                   </tr>
                 );
               })}
