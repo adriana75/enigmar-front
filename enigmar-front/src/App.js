@@ -11,6 +11,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import UpdateUser from "./pages/users/UpdateUser";
+import UpdateAdvances from "./pages/advances/UpdateAdvances";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -35,6 +36,7 @@ function App() {
           <Route path="/inscripciones" element={<IndexE />} />
           <Route path="/avances" element={<IndexA />} />
           <Route path="/usuarios/editar/:_id" element={<UpdateUser />} />
+          <Route path="/avances/editar/:_id" element={<UpdateAdvances />}/>
         </Routes>
         <Footer />
       </BrowserRouter>

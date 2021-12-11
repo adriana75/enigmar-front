@@ -15,4 +15,15 @@ const GET_AVANCES = gql `
     }
 `;
 
-export {GET_AVANCES};
+const GET_ADVANCE = gql `
+    query Query($id: String!) {
+        Advance(_id: $id) {
+        _id
+        addDate
+        description
+        observations
+        }
+    }
+`;
+
+export {GET_AVANCES, GET_ADVANCE};
