@@ -53,7 +53,6 @@ const IndexEnrollments = () => {
             <th>Estado</th>
             <th>Fecha de Inscripción</th>
             <th>Fecha Final</th>
-            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>

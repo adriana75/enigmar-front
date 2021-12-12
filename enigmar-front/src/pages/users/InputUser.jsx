@@ -43,7 +43,7 @@ const submitForm = (e) => {
             <Input name='lastName' label='Apellidos' required={true} type='text' />
             <Input name='password' label='Contraseña' required={true} type='text' />
             <DropDown label='Rol' options={Enum_Role} name='role' required={true} />
-            <ButtonLoading text='Crear Proyecto' loading={false} disabled={false} />
+            <ButtonLoading text='Registrarse' loading={false} disabled={false} />
             <hidden label= 'Estado' defaultValue= 'pending' name='status'/>
           </form>
         </div>
