@@ -8,6 +8,7 @@ import useFormData from '../../hooks/useFormData';
 import { nanoid } from 'nanoid';
 import { GET_USUARIOS, GET_LIDER } from '../../graphql/users/queries';
 import { CREAR_PROYECTO } from '../../graphql/projects/mutations';
+import { Table, Container, Button, Image, Row, Figure } from "react-bootstrap";
 
 const InputProject = () => {
   const { form, formData, updateFormData } = useFormData();
@@ -60,6 +61,7 @@ const InputProject = () => {
   if (loading) return <div>...Loading</div>;
 
   return (
+    <Container>
     <div className='p-10 flex flex-col items-center'>
       <div className='self-start'>
         <Link to='/proyectos'>
@@ -90,6 +92,7 @@ const InputProject = () => {
         </div>
       </form>
     </div>
+    </Container>
   );
 
 };

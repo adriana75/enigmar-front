@@ -18,7 +18,12 @@ const IndexAdvances = () => {
   }, [data]);
 
   return (
+    
     <Container>
+      <Link to='/proyectos'>
+            <i className='fas fa-arrow-left text-gray-600 cursor-pointer font-bold text-xl hover:text-gray-900' />
+            PROYECTOS
+      </Link>
       <h2 className="text-center mt-3">Datos avances</h2>
       <hr />
       <Table striped hover fluid>

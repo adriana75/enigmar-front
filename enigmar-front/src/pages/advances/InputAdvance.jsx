@@ -7,6 +7,7 @@ import ButtonLoading from '../../components/ButtonLoading';
 import useFormData from '../../hooks/useFormData';
 import { GET_PROJECT } from '../../graphql/projects/queries' 
 import { CREAR_AVANCE } from '../../graphql/advances/mutations';
+import { Table, Container, Button, Image, Row, Figure } from "react-bootstrap";
 
 const InputAdvances = () => {
     const { form, formData, updateFormData } = useFormData();
@@ -49,10 +50,12 @@ const submitForm = (e) => {
     if (loading) return <div>...Loading</div>;
 
     return (
+      <Container>
         <div className='p-10 flex flex-col items-center'>
           <div className='self-start'>
-            <Link to='/avances'>
+            <Link to='/proyectos'>
               <i className='fas fa-arrow-left' />
+              PROYECTOS
             </Link>
           </div>
           <h1 className='text-2xl font-bold text-gray-900'>Crear Avance</h1>
@@ -65,6 +68,7 @@ const submitForm = (e) => {
             <ButtonLoading text='Crear Avance' loading={false} disabled={false} />
           </form>
         </div>
+        </Container>
       );
 
 };

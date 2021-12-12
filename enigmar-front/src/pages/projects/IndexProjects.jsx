@@ -8,6 +8,7 @@ import useFormData from '../../hooks/useFormData';
 import { Enum_statusProject, Enum_phaseProject } from "../../utils/enums";
 import DropDown from '../../components/Dropdown';
 
+
 const IndexProjects = () => {
 
   const { data: queryData, error, loading } = useQuery(GET_PROYECTOS);
@@ -17,6 +18,7 @@ const IndexProjects = () => {
   }, [queryData]);
 
   return (
+    <Container>
     <Row>
       <p><Link
         to={`/proyectos/crear/`}
@@ -96,6 +98,7 @@ const IndexProjects = () => {
         </tbody>
       </Table>
     </Row>
+    </Container>
   );
 };
 

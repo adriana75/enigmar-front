@@ -41,7 +41,7 @@ const IndexEnrollments = () => {
     };
   
   return (
-    <Container fluid>
+    <Container>
       <h2 className="text-center mt-3">Datos inscripciones</h2>
       <hr />
 

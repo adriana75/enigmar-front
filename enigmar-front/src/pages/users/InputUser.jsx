@@ -7,7 +7,7 @@ import ButtonLoading from '../../components/ButtonLoading';
 import useFormData from '../../hooks/useFormData';
 import { CREAR_USUARIO } from '../../graphql/users/mutations';
 import { Enum_Role } from '../../utils/enums';
-
+import { Table, Container, Button, Image, Row, Figure } from "react-bootstrap";
 
 const InputUser = () => {
     const { form, formData, updateFormData } = useFormData();
@@ -29,6 +29,7 @@ const submitForm = (e) => {
 
 
     return (
+      <Container>
         <div className='p-10 flex flex-col items-center'>
           <div className='self-start'>
             <Link to='/usuarios'>
@@ -47,6 +48,7 @@ const submitForm = (e) => {
             <hidden label= 'Estado' defaultValue= 'pending' name='status'/>
           </form>
         </div>
+        </Container>
       );
 
 };

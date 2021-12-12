@@ -9,6 +9,7 @@ import ButtonLoading from '../../components/ButtonLoading.jsx';
 import DropDown from '../../components/Dropdown';
 import Input from '../../components/Input';
 import { Enum_statusUser } from '../../utils/enums';
+import { Table, Container, Button, Image, Row, Figure } from "react-bootstrap";
 
 const UpdateUser = () => {
   const { form, formData, updateFormData } = useFormData(null);
@@ -36,6 +37,7 @@ const UpdateUser = () => {
     editarUsuario({
       variables: { id: _id, ...formData },
     });
+    <Link to='/usuarios'/>
   };
 
   useEffect(() => {
@@ -57,11 +59,13 @@ const UpdateUser = () => {
   if (queryLoading) return <div>Cargando....</div>;
 
   return (
+    <Container>
     <div className='flew flex-col w-full h-full items-center justify-center p-10'>
       <Link to='/usuarios'>
         <i className='fas fa-arrow-left text-gray-600 cursor-pointer font-bold text-xl hover:text-gray-900' />
-      </Link>
-      <h1 className='m-4 text-3xl text-gray-800 font-bold text-center'>Editar Usuario</h1>
+        USUARIOS
+      </Link> 
+      <h1 className='m-4 text-3xl text-gray-800 font-bold text-center'>Editar Usuario</h1> 
       <form
         onSubmit={submitForm}
         onChange={updateFormData}
@@ -104,6 +108,7 @@ const UpdateUser = () => {
         />
       </form>
     </div>
+    </Container>
   );
 };
 
