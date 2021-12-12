@@ -1,11 +1,18 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { GET_AVANCES } from "../../graphql/advances/queries";
+import { GET_AVANCES, GET_ADVANCEP } from "../../graphql/advances/queries";
 import { Table, Container, Button, Image, Row, Figure } from "react-bootstrap";
 
 const IndexAdvances = () => {
-  const { data, error, loading } = useQuery(GET_AVANCES);
+
+  const { _id } = useParams();
+
+  const mutation = _id ? GET_ADVANCEP : GET_AVANCES;
+  const nameList = _id ? 'AdvanceP' : 'Advances';
+
+  const { data, error, loading } = useQuery(mutation, { variables: { projectId: _id } })
+
   useEffect(() => {
     console.log("data servidor", data);
   }, [data]);
@@ -25,9 +32,9 @@ const IndexAdvances = () => {
           </tr>
         </thead>
         <tbody>
-          {data && data.Advances ? (
+          {data && data[nameList] ? (
             <>
-              {data.Advances.map((a) => {
+              {data[nameList].map((a) => {
                 return (
                   <tr key={a._id}>
                     <td>{a.project_id.name}</td>
@@ -35,7 +42,7 @@ const IndexAdvances = () => {
                     <td>{a.description}</td>
                     <td>{a.observations}</td>
                     <td>
-                    <Link
+                      <Link
                         to={`/avances/editar/${a._id}`}
                         className="btn btn-secondary mt-3 ms-3 mb-3"
                       >

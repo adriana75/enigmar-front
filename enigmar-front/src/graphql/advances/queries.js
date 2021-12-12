@@ -29,9 +29,14 @@ const GET_ADVANCE = gql `
 const GET_ADVANCEP = gql `
     query Query($projectId: String!) {
         AdvanceP(project_id: $projectId) {
-        description
-        observations
-        _id
+            _id
+            project_id {
+                _id
+                name
+            }
+            addDate
+            description
+            observations
         }
     }
 `;

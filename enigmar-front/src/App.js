@@ -35,6 +35,7 @@ function App() {
           <Route path="/proyectos" element={<IndexP />} />
           <Route path="/inscripciones" element={<IndexE />} />
           <Route path="/avances" element={<IndexA />} />
+          <Route path="/avances/:_id" element={<IndexA />} />
           <Route path="/usuarios/editar/:_id" element={<UpdateUser />} />
           <Route path="/avances/editar/:_id" element={<UpdateAdvances />}/>
         </Routes>
