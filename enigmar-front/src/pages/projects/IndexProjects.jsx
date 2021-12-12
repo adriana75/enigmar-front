@@ -41,7 +41,8 @@ const IndexProjects = () => {
             <th>Rol</th>
             <th>Estado</th>
             <th>Fase</th>
-            <th>Avances</th>
+            <th>Ver Avances</th>
+            <th>Ingresar Avance</th>
           </tr>
         </thead>
         <tbody>
@@ -76,8 +77,15 @@ const IndexProjects = () => {
                           </Link>
                         )
                         : ("")}
-
                     </td>
+                    <td>
+                      <Link
+                            to={`/avances/crear/${p._id}`}
+                            className="btn btn-secondary mt-3 ms-3 mb-3"
+                          >
+                            Crear avances
+                      </Link>
+                      </td>
                   </tr>
                 );
               })}

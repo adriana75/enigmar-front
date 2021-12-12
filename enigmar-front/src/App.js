@@ -39,7 +39,7 @@ function App() {
           <Route path="/inscripciones" element={<IndexE />} />
           <Route path="/avances" element={<IndexA />} />
           <Route path="/avances/:_id" element={<IndexA />} />
-          <Route path="/avances/crear" element={<InputAdvances />} />
+          <Route path="/avances/crear/:_id" element={<InputAdvances />} />
           <Route path="/usuarios/editar/:_id" element={<UpdateUser />} />
           <Route path="/avances/editar/:_id" element={<UpdateAdvances />}/>
         </Routes>

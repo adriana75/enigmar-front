@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useMutation, useQuery } from '@apollo/client';
 import Input from '../../components/Input';
-import { Link } from 'react-router-dom';
-import DropDown from '../../components/Dropdown';
+import { Link, useParams } from 'react-router-dom';
+//import DropDown from '../../components/Dropdown';
 import ButtonLoading from '../../components/ButtonLoading';
 import useFormData from '../../hooks/useFormData';
-import { GET_PROYECTOS } from '../../graphql/projects/queries';
+import { GET_PROJECT } from '../../graphql/projects/queries' 
 import { CREAR_AVANCE } from '../../graphql/advances/mutations';
 
 const InputAdvances = () => {
     const { form, formData, updateFormData } = useFormData();
-    const [listProjects, setListProjects] = useState({});
-    const { data, loading, error } = useQuery(GET_PROYECTOS); 
+    //const [listProjects, setListProjects] = useState({});
+    const { _id } = useParams();
+    const { data, loading, error } = useQuery(GET_PROJECT, { variables: { id: _id } }); 
     useEffect(() => {
         console.log("datos proyectos", data);
       }, [data]);
@@ -21,14 +22,14 @@ const [inputAdvance, { data: mutationData, loading: mutationLoading, error: muta
 
 useEffect(() => {
     console.log(data);
-    if (data) {
+    /*if (data) {
         const lu = {};
         data.Projects.forEach((elemento) => {
         lu[elemento._id] = elemento.name;
         });
 
-        setListProjects(lu);
-    }
+        //setListProjects(lu);
+    }*/
     }, [data]);
 
 useEffect(() => {
@@ -39,8 +40,10 @@ const submitForm = (e) => {
     e.preventDefault();
 
     inputAdvance({
-        variables: formData,
+        variables: {project_id:data.Project._id, ...formData},
     });
+    window.location.reload(false);
+
     };
 
     if (loading) return <div>...Loading</div>;
@@ -54,7 +57,8 @@ const submitForm = (e) => {
           </div>
           <h1 className='text-2xl font-bold text-gray-900'>Crear Avance</h1>
           <form ref={form} onChange={updateFormData} onSubmit={submitForm}>
-            <DropDown label='Proyecto' options={listProjects} name='project_id' required={true} />
+            <Input label='Proyecto' defaultValue ={data.Project.name} name='name' disabled />
+            <hidden label='Proyecto' defaultValue ={data.Project._id} name='project_id'/>
             <Input name='addDate' label='Fecha de Avance' required={true} type='date' />
             <Input name='description' label='Descripción' required={true} type='text' />
             <Input name='observations' label='Observaciones' required={false} type='text' />

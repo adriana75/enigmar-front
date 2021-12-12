@@ -26,4 +26,13 @@ const GET_PROYECTOS = gql `
   }
 `;
 
-export {GET_PROYECTOS};
+const GET_PROJECT = gql `
+  query Query($id: String!) {
+    Project(_id: $id) {
+      _id
+      name
+    }
+  }
+`;
+
+export {GET_PROYECTOS, GET_PROJECT};
