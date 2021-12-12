@@ -6,17 +6,16 @@ import DropDown from '../../components/Dropdown';
 import ButtonLoading from '../../components/ButtonLoading';
 import useFormData from '../../hooks/useFormData';
 import { nanoid } from 'nanoid';
-import { GET_USUARIOS } from '../../graphql/users/queries';
+import { GET_USUARIOS, GET_LIDER } from '../../graphql/users/queries';
 import { CREAR_PROYECTO } from '../../graphql/projects/mutations';
 
 const InputProject = () => {
     const { form, formData, updateFormData } = useFormData();
     const [listUsers, setListUsers] = useState({});
-    const { data, loading, error } = useQuery(GET_USUARIOS, {
-      variables: {
-        filtro: { role: 'leader', status: 'authorized' },
-      },
-});
+    const { data, loading, error } = useQuery(GET_LIDER); 
+    useEffect(() => {
+        console.log("data filtrada", data);
+      }, [data]);
 
 const [inputProject, { data: mutationData, loading: mutationLoading, error: mutationError }] =
     useMutation(CREAR_PROYECTO);
@@ -25,7 +24,7 @@ useEffect(() => {
     console.log(data);
     if (data) {
         const lu = {};
-        data.Users.forEach((elemento) => {
+        data.LiderAut.forEach((elemento) => {
         lu[elemento._id] = elemento.email;
         });
 
@@ -40,7 +39,7 @@ useEffect(() => {
 const submitForm = (e) => {
     e.preventDefault();
 
-    formData.badget = parseFloat(formData.badget);
+    formData.budget = parseFloat(formData.budget);
 
     inputProject({
         variables: formData,
@@ -61,7 +60,7 @@ const submitForm = (e) => {
             <Input name='name' label='Nombre del Proyecto' required={true} type='text' />
             <Input name='generalObjective' label='Objetivo General' required={true} type='text' />
             <Input name= 'specificObjectives' label='Objetivos Específicos' required={true} type='text'/>
-            <Input name='badget' label='Presupuesto del Proyecto' required={true} type='number' />
+            <Input name='budget' label='Presupuesto del Proyecto' required={true} type='number' />
             <Input name='startDate' label='Fecha de Inicio' required={true} type='date' />
             <Input name='endDate' label='Fecha de Fin' required={true} type='date' />
             <DropDown label='Líder' options={listUsers} name='leader_id' required={true} />

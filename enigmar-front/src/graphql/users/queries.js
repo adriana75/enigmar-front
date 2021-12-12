@@ -53,4 +53,15 @@ const GET_USUARIO = gql `
     }
 `;
 
-export {GET_USUARIOS, GET_USUARIO};
+const GET_LIDER = gql `
+query Query {
+    LiderAut {
+      _id  
+      status
+      role
+      email
+    }
+  }
+`;
+
+export {GET_USUARIOS, GET_USUARIO, GET_LIDER};
