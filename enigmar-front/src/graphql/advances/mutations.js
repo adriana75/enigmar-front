@@ -17,4 +17,26 @@ mutation Mutation(
 }
 `;
 
-export {EDITAR_AVANCES};
+const CREAR_AVANCE = gql`
+  mutation Mutation(
+    $project_id: String!, 
+    $addDate: Date!, 
+    $description: String!, 
+    $observations: String) {
+    inputAdvance(
+      project_id: $project_id, 
+      addDate: $addDate, 
+      description: $description, 
+      observations: $observations) {
+      _id
+      project_id {
+        _id
+      }
+      addDate
+      description
+      observations
+    }
+  }
+`;
+
+export {EDITAR_AVANCES, CREAR_AVANCE};
