@@ -19,4 +19,20 @@ const GET_INSCRIPCIONES = gql `
   }
 `;
 
-export {GET_INSCRIPCIONES};
+const GET_INSCRIPCION = gql `
+  query Enrollment($id: String!) {
+    Enrollment(_id: $id) {
+      project_id {
+        name
+     }
+      user_id {
+        name
+      }
+      status
+      enrollmentDate
+      egressDate
+    }
+  }
+
+  `;
+export {GET_INSCRIPCIONES, GET_INSCRIPCION};
