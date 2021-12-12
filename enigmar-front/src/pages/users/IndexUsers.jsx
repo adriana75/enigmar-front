@@ -58,21 +58,6 @@ const IndexUsers = () => {
       </Table>
       <br />
       <br />
-      <h2 className="text-center mt-3">Datos Estudiantes</h2>
-      <hr />
-      <Table striped hover fluid>
-        <thead>
-          <tr>
-            <th>email</th>
-            <th>Identificación</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Rol</th>
-            <th>Estado</th>
-            <th>Contraseña</th>
-          </tr>
-        </thead>
-      </Table>
     </Container>
   );
 };

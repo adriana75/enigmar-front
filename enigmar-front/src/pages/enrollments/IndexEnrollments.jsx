@@ -30,7 +30,7 @@ const IndexEnrollments = () => {
         toast.error('Error aprobando la inscripcion');
       }
       if (queryError) {
-        toast.error('Error consultando el usuario');
+        toast.error('Error consultando la inscripción');
       }
     }, [queryError, error]);
   
@@ -75,6 +75,7 @@ const IndexEnrollments = () => {
                         onClick={() => {
                           console.log(e._id)
                           cambiarEstadoInscripcion(e._id);
+                          window.location.reload(false);
                         }}
                       >
                         Aprobar Inscripción
