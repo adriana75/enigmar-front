@@ -18,8 +18,15 @@ const IndexProjects = () => {
 
   return (
     <Row>
+      <p><Link
+        to={`/proyectos/crear/`}
+        className="btn btn-secondary mt-3 ms-3 mb-3"
+      >
+        CREAR PROYECTO
+      </Link></p>
       <h2 className="text-center mt-3">Datos proyectos</h2>
       <hr />
+      
       <Table striped hover fluid>
         <thead>
           <tr>

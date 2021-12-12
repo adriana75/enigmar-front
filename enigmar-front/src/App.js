@@ -12,6 +12,7 @@ import {
 } from "@apollo/client";
 import UpdateUser from "./pages/users/UpdateUser";
 import UpdateAdvances from "./pages/advances/UpdateAdvances";
+import InputProject from "./pages/projects/inputProject";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -33,6 +34,7 @@ function App() {
         <Routes>
           <Route path="/usuarios" element={<IndexU />} />
           <Route path="/proyectos" element={<IndexP />} />
+          <Route path="/proyectos/crear" element={<InputProject />} />
           <Route path="/inscripciones" element={<IndexE />} />
           <Route path="/avances" element={<IndexA />} />
           <Route path="/avances/:_id" element={<IndexA />} />

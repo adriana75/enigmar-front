@@ -16,4 +16,41 @@ mutation ProjectUpdatePhase($id: String!, $phase: Enum_phaseProject!) {
   }
 }`;
 
-export {EDITAR_PROYECTO_ESTADO, EDITAR_PROYECTO_FASE};
+const CREAR_PROYECTO = gql `
+  mutation Mutation(
+    $name: String!, 
+    $generalObjective: String!, 
+    $specificObjectives: [String]!, 
+    $budget: Float!, $startDate: Date!, 
+    $endDate: Date!, $leaderId: String, 
+    $status: Enum_statusProject, 
+    $phase: Enum_phaseProject) {
+    createProject(
+      name: $name, 
+      generalObjective: 
+      $generalObjective, 
+      specificObjectives: 
+      $specificObjectives, 
+      budget: $budget, 
+      startDate: $startDate, 
+      endDate: $endDate, 
+      leader_id: $leaderId, 
+      status: $status, 
+      phase: $phase) {
+      _id
+      name
+      generalObjective
+      specificObjectives
+      budget
+      startDate
+      endDate
+      leader_id {
+        _id
+      }
+      status
+      phase
+    }
+  }
+`;
+
+export {EDITAR_PROYECTO_ESTADO, EDITAR_PROYECTO_FASE, CREAR_PROYECTO};
