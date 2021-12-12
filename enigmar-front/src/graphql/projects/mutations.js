@@ -22,9 +22,8 @@ const CREAR_PROYECTO = gql `
     $generalObjective: String!, 
     $specificObjectives: [String]!, 
     $budget: Float!, $startDate: Date!, 
-    $endDate: Date!, $leader_id: String, 
-    $status: Enum_statusProject, 
-    $phase: Enum_phaseProject) {
+    $endDate: Date!, $leader_id: String!
+    ) {
     createProject(
       name: $name, 
       generalObjective: 
@@ -34,9 +33,8 @@ const CREAR_PROYECTO = gql `
       budget: $budget, 
       startDate: $startDate, 
       endDate: $endDate, 
-      leader_id: $leader_id, 
-      status: $status, 
-      phase: $phase) {
+      leader_id: $leader_id
+      ) {
       _id
       name
       generalObjective
@@ -47,8 +45,6 @@ const CREAR_PROYECTO = gql `
       leader_id {
         _id
       }
-      status
-      phase
     }
   }
 `;

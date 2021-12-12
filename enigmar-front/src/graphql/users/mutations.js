@@ -26,4 +26,33 @@ const EDITAR_USUARIO = gql `
     }
 `;
 
-export {EDITAR_USUARIO};
+const CREAR_USUARIO = gql `
+    mutation Mutation(
+        $email: String!, 
+        $documentId: String!, 
+        $name: String!, 
+        $lastName: String!, 
+        $role: Enum_Role!, 
+        $password: String!, 
+        $status: Enum_statusUser) {
+        inputUser(
+            email: $email, 
+            documentId: $documentId, 
+            name: $name, 
+            lastName: $lastName, 
+            role: $role, 
+            password: $password, 
+            status: $status) {
+        _id
+        email
+        documentId
+        name
+        lastName
+        role
+        status
+        password
+        }
+    }
+`;
+
+export {EDITAR_USUARIO, CREAR_USUARIO};
