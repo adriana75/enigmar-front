@@ -19,11 +19,13 @@ const NavBar = () => {
             <Link to="/" className="nav-link">
               Inicio
             </Link>
+            <Link to="/usuarios/crear" className="nav-link">
+              Registrarse
+            </Link>
             <Link to="/usuarios" className="nav-link">
               {" "}
               Usuarios
             </Link>
-
             <Link to="/proyectos" className="nav-link">
               Proyectos
             </Link>
