@@ -26,4 +26,14 @@ const GET_ADVANCE = gql `
     }
 `;
 
-export {GET_AVANCES, GET_ADVANCE};
+const GET_ADVANCEP = gql `
+    query Query($projectId: String!) {
+        AdvanceP(project_id: $projectId) {
+        description
+        observations
+        _id
+        }
+    }
+`;
+
+export {GET_AVANCES, GET_ADVANCE, GET_ADVANCEP};
