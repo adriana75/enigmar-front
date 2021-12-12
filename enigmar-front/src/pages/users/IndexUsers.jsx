@@ -72,64 +72,6 @@ const IndexUsers = () => {
             <th>Contraseña</th>
           </tr>
         </thead>
-        <tbody>
-          {data && data.Students ? (
-            <>
-              {data.Students.map((s) => {
-                return (
-                  <tr key={s._id}>
-                    <td>{s.email}</td>
-                    <td>{s.documentId}</td>
-                    <td>{s.name}</td>
-                    <td>{s.lastName}</td>
-                    <td>{s.role}</td>
-                    <td>{s.status}</td>
-                    <td>{s.password}</td>
-                  </tr>
-                );
-              })}
-            </>
-          ) : (
-            <div>No autorizado</div>
-          )}
-        </tbody>
-      </Table>
-      <br />
-      <br />
-      <h2 className="text-center mt-3">Datos usuarios pendientes</h2>
-      <hr />
-      <Table striped hover fluid>
-        <thead>
-          <tr>
-            <th>email</th>
-            <th>Identificación</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Rol</th>
-            <th>Estado</th>
-            <th>Contraseña</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data && data.Pending ? (
-            <>
-              {data.Pending.map((pe) => {
-                return (
-                  <tr key={pe._id}>
-                    <td>{pe.email}</td>
-                    <td>{pe.documentId}</td>
-                    <td>{pe.name}</td>
-                    <td>{pe.lastName}</td>
-                    <td>{pe.role}</td>
-                    <td>{pe.status}</td>
-                  </tr>
-                );
-              })}
-            </>
-          ) : (
-            <div>No autorizado</div>
-          )}
-        </tbody>
       </Table>
     </Container>
   );
