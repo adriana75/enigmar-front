@@ -14,6 +14,7 @@ import UpdateUser from "./pages/users/UpdateUser";
 import UpdateAdvances from "./pages/advances/UpdateAdvances";
 import InputProject from "./pages/projects/inputProject";
 import InputAdvances from "./pages/advances/InputAdvance"
+import InputUser from "./pages/users/InputUser";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -40,8 +41,9 @@ function App() {
           <Route path="/avances" element={<IndexA />} />
           <Route path="/avances/:_id" element={<IndexA />} />
           <Route path="/avances/crear/:_id" element={<InputAdvances />} />
-          <Route path="/usuarios/editar/:_id" element={<UpdateUser />} />
           <Route path="/avances/editar/:_id" element={<UpdateAdvances />}/>
+          <Route path="/usuarios/editar/:_id" element={<UpdateUser />} />
+          <Route path="/usuarios/crear" element={<InputUser />} />
         </Routes>
         <Footer />
       </BrowserRouter>
