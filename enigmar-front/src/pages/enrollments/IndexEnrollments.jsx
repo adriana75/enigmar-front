@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams, Link } from 'react-router-dom';
 import { useQuery, useMutation } from "@apollo/client";
 import { GET_INSCRIPCIONES } from "../../graphql/enrollments/queries";
-import { APROBAR_INSCRIPCION } from "../../graphql/enrollments/mutations";
+import { APROBAR_INSCRIPCION } from "../../graphql/enrollments/mutaciones"
 import { Table, Container, Button, Image, Row, Figure } from "react-bootstrap";
 import { toast } from 'react-toastify';
 

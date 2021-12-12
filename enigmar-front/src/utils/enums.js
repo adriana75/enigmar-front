@@ -13,6 +13,7 @@ const Enum_Role = {
   const Enum_statusProject = {
     active: 'active',
     inactive: 'inactive',
+    pending: 'pending',
   };
   
   const Enum_phaseProject = {
