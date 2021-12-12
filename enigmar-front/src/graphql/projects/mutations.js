@@ -26,10 +26,8 @@ const CREAR_PROYECTO = gql `
     ) {
     createProject(
       name: $name, 
-      generalObjective: 
-      $generalObjective, 
-      specificObjectives: 
-      $specificObjectives, 
+      generalObjective: $generalObjective, 
+      specificObjectives: $specificObjectives, 
       budget: $budget, 
       startDate: $startDate, 
       endDate: $endDate, 
