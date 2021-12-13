@@ -40,9 +40,9 @@ const IndexProjects = () => {
             <th>Fecha Final</th>
             <th>Nombre del Líder</th>
             <th>Apellido del Líder</th>
-            <th>Rol</th>
             <th>Estado</th>
             <th>Fase</th>
+            <th>Editar</th>
             <th>Ver Avances</th>
             <th>Ingresar Avance</th>
           </tr>
@@ -61,12 +61,19 @@ const IndexProjects = () => {
                     <td>{p.endDate}</td>
                     <td>{p.leader_id.name}</td>
                     <td>{p.leader_id.lastName}</td>
-                    <td>{p.leader_id.role}</td>
                     <td>
-                      <DropDownOptions id={p._id} name='status' options={Enum_statusProject} currentValue={p.status} mutation={EDITAR_PROYECTO_ESTADO} />
+                      <DropDownOptions id={p._id} name='status' options={Enum_statusProject} currentValue={p.status} mutation={EDITAR_PROYECTO_ESTADO} /> 
                     </td>
                     <td>
                       <DropDownOptions id={p._id} name='phase' options={Enum_phaseProject} currentValue={p.phase} mutation={EDITAR_PROYECTO_FASE} />
+                    </td>
+                    <td>
+                    <Link
+                            to={`/proyectos/editar/${p._id}`}
+                            className="btn btn-secondary mt-3 ms-3 mb-3"
+                          >
+                            Editar Proyecto
+                      </Link>
                     </td>
                     <td>
                       {p.advances && p.advances.length > 0 ?
@@ -121,6 +128,7 @@ const DropDownOptions = ({ id, name, options, currentValue, mutation }) => {
   useEffect(() => {
     if (formData.status != undefined) {
       window.location.reload(false);
+      
     }
   }, [dataMutation]);
 

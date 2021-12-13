@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import DropDown from '../../components/Dropdown';
 import ButtonLoading from '../../components/ButtonLoading';
 import useFormData from '../../hooks/useFormData';
-import { nanoid } from 'nanoid';
 import { GET_USUARIOS, GET_LIDER } from '../../graphql/users/queries';
 import { CREAR_PROYECTO } from '../../graphql/projects/mutations';
 import { Table, Container, Button, Image, Row, Figure } from "react-bootstrap";

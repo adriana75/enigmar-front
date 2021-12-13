@@ -29,21 +29,22 @@ const submitForm = (e) => {
 
 
     return (
-      <Container>
-        <div className='p-10 flex flex-col items-center'>
+      <Container> 
+        <div className='p-10 flex flex-col'>
           <div className='self-start'>
             <Link to='/usuarios'>
               <i className='fas fa-arrow-left' />
             </Link>
           </div>
           <h1 className='text-2xl font-bold text-gray-900'>Registrarse</h1>
+          <hr/>
           <form ref={form} onChange={updateFormData} onSubmit={submitForm}>
-            <Input name='email' label='Correo electrónico' required={true} type='text' />
-            <Input name='documentId' label='Documento de Identidad' required={true} type='text' />
-            <Input name= 'name' label='Nombre' required={true} type='text'/>
-            <Input name='lastName' label='Apellidos' required={true} type='text' />
-            <Input name='password' label='Contraseña' required={true} type='text' />
-            <DropDown label='Rol' options={Enum_Role} name='role' required={true} />
+            <Input name='email' label='Correo electrónico: ' required={true} type='text' /><br/>
+            <Input name='documentId' label='Documento de Identidad: ' required={true} type='text' /><br/>
+            <Input name= 'name' label='Nombre: ' required={true} type='text'/><br/>
+            <Input name='lastName' label='Apellidos: ' required={true} type='text' /><br/>
+            <Input name='password' label='Contraseña: ' required={true} type='text' /><br/>
+            <DropDown label='Rol: ' options={Enum_Role} name='role' required={true} /><br/>
             <ButtonLoading text='Registrarse' loading={false} disabled={false} />
             <hidden label= 'Estado' defaultValue= 'pending' name='status'/>
           </form>

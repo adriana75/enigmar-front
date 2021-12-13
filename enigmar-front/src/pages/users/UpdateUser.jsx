@@ -37,7 +37,6 @@ const UpdateUser = () => {
     editarUsuario({
       variables: { id: _id, ...formData },
     });
-    <Link to='/usuarios'/>
   };
 
   useEffect(() => {

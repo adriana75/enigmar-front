@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useMutation, useQuery } from '@apollo/client';
 import Input from '../../components/Input';
 import { Link, useParams } from 'react-router-dom';
-//import DropDown from '../../components/Dropdown';
 import ButtonLoading from '../../components/ButtonLoading';
 import useFormData from '../../hooks/useFormData';
 import { GET_PROJECT } from '../../graphql/projects/queries' 
@@ -11,7 +10,6 @@ import { Table, Container, Button, Image, Row, Figure } from "react-bootstrap";
 
 const InputAdvances = () => {
     const { form, formData, updateFormData } = useFormData();
-    //const [listProjects, setListProjects] = useState({});
     const { _id } = useParams();
     const { data, loading, error } = useQuery(GET_PROJECT, { variables: { id: _id } }); 
     useEffect(() => {
@@ -23,14 +21,6 @@ const [inputAdvance, { data: mutationData, loading: mutationLoading, error: muta
 
 useEffect(() => {
     console.log(data);
-    /*if (data) {
-        const lu = {};
-        data.Projects.forEach((elemento) => {
-        lu[elemento._id] = elemento.name;
-        });
-
-        //setListProjects(lu);
-    }*/
     }, [data]);
 
 useEffect(() => {

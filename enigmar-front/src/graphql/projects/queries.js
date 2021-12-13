@@ -27,10 +27,13 @@ const GET_PROYECTOS = gql `
 `;
 
 const GET_PROJECT = gql `
-  query Query($id: String!) {
-    Project(_id: $id) {
+  query Query($_id: String!) {
+    Project(_id: $_id) {
       _id
       name
+      generalObjective
+      specificObjectives
+      budget
     }
   }
 `;

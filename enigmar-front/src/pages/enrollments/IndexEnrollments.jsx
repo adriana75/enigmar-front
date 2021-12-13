@@ -16,7 +16,6 @@ const IndexEnrollments = () => {
     console.log("data servidor", queryData);
   }, [queryData]);
 
-  //const { approveEnrollmentId } = useParams();
   const [aprobarInscripcion, { data, loading, error }] = useMutation(APROBAR_INSCRIPCION);
   
   useEffect(() => {

@@ -15,6 +15,7 @@ import UpdateAdvances from "./pages/advances/UpdateAdvances";
 import InputProject from "./pages/projects/inputProject";
 import InputAdvances from "./pages/advances/InputAdvance"
 import InputUser from "./pages/users/InputUser";
+import UpdateProject from "./pages/projects/UpdateProject";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -37,6 +38,7 @@ function App() {
           <Route path="/usuarios" element={<IndexU />} />
           <Route path="/proyectos" element={<IndexP />} />
           <Route path="/proyectos/crear" element={<InputProject />} />
+          <Route path="/proyectos/editar/:_id" element={<UpdateProject />} />
           <Route path="/inscripciones" element={<IndexE />} />
           <Route path="/avances" element={<IndexA />} />
           <Route path="/avances/:_id" element={<IndexA />} />
