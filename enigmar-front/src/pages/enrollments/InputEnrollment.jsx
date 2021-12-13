@@ -14,7 +14,7 @@ const InputEnrollment = () => {
     const { form, formData, updateFormData } = useFormData();
     const { _id } = useParams();
     const [listStudents, setListStudents] = useState({});
-    const { dataS} = useQuery(GET_STUDENTS, {variables: {_id: _id}});
+    const { data: dataS } = useQuery(GET_STUDENTS);
     const {data, loading} = useQuery(GET_PROJECT, {variables: { _id: _id }});
     
     useEffect(() => {
