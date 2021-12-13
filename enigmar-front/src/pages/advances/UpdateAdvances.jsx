@@ -63,7 +63,7 @@ const UpdateAdvances = () => {
             <i className='fas fa-arrow-left text-gray-600 cursor-pointer font-bold text-xl hover:text-gray-900' />
             PROYECTOS
         </Link>
-        <h1 className='m-4 text-3xl text-gray-800 font-bold text-center'>Editar Avance</h1>
+        <h1 className='m-4 text-3xl text-gray-800 font-bold text-center'>EDITAR AVANCE</h1><hr/><br/>
         <form
             onSubmit={submitForm}
             onChange={updateFormData}
@@ -76,20 +76,20 @@ const UpdateAdvances = () => {
             name='addDate'
             defaultValue={queryData.Advance.addDate}
             required={true}
-            />
+            /><br/>
             <Input
-            label='Descripción:'
+            label='Descripción: '
             type='text'
             name='description'
             defaultValue={queryData.Advance.description}
             required={true}
-            />
+            /><br/>
             <Input
-            label='Observaciones:'
+            label='Observaciones: '
             name='observations'
             defaultValue={queryData.Advance.observations}
             required={true}
-            />
+            /><br/>
             
             <ButtonLoading
             disabled={Object.keys(formData).length === 0}

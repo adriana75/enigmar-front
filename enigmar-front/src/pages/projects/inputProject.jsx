@@ -68,23 +68,23 @@ const InputProject = () => {
           PROYECTOS
         </Link>
       </div>
-      <h1 className='text-2xl font-bold text-gray-900'>Crear Nuevo Proyecto</h1>
+      <h1 className='text-2xl font-bold text-gray-900 text-center'>NUEVO PROYECTO</h1><hr/><br/>
       <form ref={form} onChange={updateFormData} onSubmit={submitForm}>
         <div>
-          <Input name='name' label='Nombre del Proyecto' required={true} type='text' />
-          <Input name='budget' label='Presupuesto del Proyecto' required={true} type='number' />
-          <Input name='startDate' label='Fecha de Inicio' required={true} type='date' />
-          <Input name='endDate' label='Fecha de Fin' required={true} type='date' />
-          <DropDown label='Líder' options={listUsers} name='leader_id' required={true} />
+          <Input name='name' label='Nombre del Proyecto: ' required={true} type='text' /><br/>
+          <Input name='budget' label='Presupuesto del Proyecto: ' required={true} type='number' /><br/>
+          <Input name='startDate' label='Fecha de Inicio: ' required={true} type='date' /><br/>
+          <Input name='endDate' label='Fecha de Fin: ' required={true} type='date' /><br/>
+          <DropDown label='Líder: ' options={listUsers} name='leader_id' required={true} />
         </div>
 
         <div>
-          <Input name='generalObjective' label='Objetivo General' required={true} type='text' />
+          <Input name='generalObjective' label='Objetivo General: ' required={true} type='text' />
         </div>
 
         Objetivos Especificos
         <div>
-          <textarea name='specificObjectives' label='Objetivos Específicos' required placeholder="Ingrese un objetivo por linea" rows="10" cols="50" />
+          <textarea name='specificObjectives' label='Objetivos Específicos: ' required placeholder="Ingrese un objetivo por linea" rows="10" cols="50" />
         </div>
 
         <div>

@@ -11,7 +11,7 @@ import { Table, Container, Button, Image, Row, Figure } from "react-bootstrap";
 const InputAdvances = () => {
     const { form, formData, updateFormData } = useFormData();
     const { _id } = useParams();
-    const { data, loading, error } = useQuery(GET_PROJECT, { variables: { id: _id } }); 
+    const { data, loading, error } = useQuery(GET_PROJECT, { variables: { _id: _id } }); 
     useEffect(() => {
         console.log("datos proyectos", data);
       }, [data]);
@@ -48,13 +48,13 @@ const submitForm = (e) => {
               PROYECTOS
             </Link>
           </div>
-          <h1 className='text-2xl font-bold text-gray-900'>Crear Avance</h1>
+          <h1 className='text-2xl font-bold text-gray-900'>CREAR AVANCE</h1><hr/><br/>
           <form ref={form} onChange={updateFormData} onSubmit={submitForm}>
-            <input label='Proyecto' defaultValue ={data.Project.name} name='name' disabled />
+            <input label='Proyecto: ' defaultValue ={data.Project.name} name='name' disabled /><br/>
             <hidden label='Proyecto' defaultValue ={data.Project._id} name='project_id'/>
-            <Input name='addDate' label='Fecha de Avance' required={true} type='date' />
-            <Input name='description' label='Descripción' required={true} type='text' />
-            <Input name='observations' label='Observaciones' required={false} type='text' />
+            <Input name='addDate' label='Fecha de Avance: ' required={true} type='date' /><br/>
+            <Input name='description' label='Descripción: ' required={true} type='text' /><br/>
+            <Input name='observations' label='Observaciones: ' required={false} type='text' /><br/>
             <ButtonLoading text='Crear Avance' loading={false} disabled={false} />
           </form>
         </div>

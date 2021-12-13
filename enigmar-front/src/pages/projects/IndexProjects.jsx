@@ -26,8 +26,8 @@ const IndexProjects = () => {
       >
         CREAR PROYECTO
       </Link></p>
-      <h2 className="text-center mt-3">Datos proyectos</h2>
-      <hr />
+      <h2 className="text-center mt-3">PROYECTOS REGISTRADOS</h2>
+      <hr /><br/><br/>
       
       <Table striped hover fluid>
         <thead>
@@ -42,10 +42,6 @@ const IndexProjects = () => {
             <th>Apellido del Líder</th>
             <th>Estado</th>
             <th>Fase</th>
-            <th>Editar</th>
-            <th>Inscribirse</th>
-            <th>Ver Avances</th>
-            <th>Ingresar Avance</th>
           </tr>
         </thead>
         <tbody>

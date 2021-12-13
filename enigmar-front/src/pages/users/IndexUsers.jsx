@@ -13,18 +13,17 @@ const IndexUsers = () => {
 
   return (
     <Container>
-      <h2 className="text-center mt-3">Datos usuarios</h2>
+      <h2 className="text-center mt-3">USUARIOS REGISTRADOS</h2>
       <hr />
       <Table striped hover fluid>
         <thead>
           <tr>
-            <th>email</th>
+            <th>Email</th>
             <th>Identificación</th>
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Rol</th>
             <th>Estado</th>
-            <th>Editar</th>
           </tr>
         </thead>
         <tbody>

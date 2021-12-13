@@ -60,12 +60,12 @@ const InputEnrollment = () => {
               PROYECTOS
             </Link>
           </div>
-          <h1 className='text-2xl font-bold text-gray-900'>Solicitar Inscripción</h1>
+          <h1 className='text-2xl font-bold text-gray-900 text-center'>SOLICITAR INSCRIPCIÓN</h1><hr/><br/>
           <form ref={form} onChange={updateFormData} onSubmit={submitForm}>
-              <input label='Proyecto' defaultValue ={data.Project.name} name='name' disabled />
-              <DropDown label='Estudiante' options={listStudents} name='user_id' required={true} />
-              <Input name='enrollmentDate' label='Fecha de Inscripción' required={true} type='date' />
-              <Input name='egressDate' label='Fecha de Fin' required={true} type='date' />
+              <input label='Proyecto: ' defaultValue ={data.Project.name} name='name' disabled /><br/>
+              <DropDown label='Estudiante: ' options={listStudents} name='user_id' required={true} /><br/>
+              <Input name='enrollmentDate' label='Fecha de Inscripción: ' required={true} type='date' /><br/>
+              <Input name='egressDate' label='Fecha de Fin: ' required={true} type='date' /><br/>
               <ButtonLoading text='Solicitar Inscripción' loading={false} disabled={false} />
           </form>
         </div>

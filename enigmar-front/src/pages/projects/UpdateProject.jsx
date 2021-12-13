@@ -62,7 +62,7 @@ const UpdateProject = () => {
             <i className='fas fa-arrow-left text-gray-600 cursor-pointer font-bold text-xl hover:text-gray-900' />
             PROYECTOS
           </Link> 
-          <h1 className='m-4 text-3xl text-gray-800 font-bold text-center'>Editar Usuario</h1> 
+          <h1 className='m-4 text-3xl text-gray-800 font-bold text-center'>EDITAR PROYECTO</h1><hr/><br/> 
           <form
             onSubmit={submitForm}
             onChange={updateFormData}
@@ -75,28 +75,28 @@ const UpdateProject = () => {
               name='name'
               defaultValue={queryData.Project.name}
               required={true}
-            />
+            /><br/>
             <Input
               label='Objetivos Generales: '
               type='text'
               name='generalObjective'
               defaultValue={queryData.Project.generalObjective}
               required={true}
-            />
+            /><br/>
             <Input
               label='Objetivos Específicos: '
               type='text'
               name='specificObjectives'
               defaultValue={queryData.Project.specificObjectives}
               required={true}
-            />
+            /><br/>
             <Input
               label='Presupuesto: '
               type='number'
               name='budget'
               defaultValue={queryData.Project.budget}
               required={true}
-            />
+            /><br/>
             <ButtonLoading
               disabled={Object.keys(formData).length === 0}
               loading={mutationLoading}

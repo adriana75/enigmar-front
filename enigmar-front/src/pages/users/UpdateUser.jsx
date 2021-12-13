@@ -64,7 +64,7 @@ const UpdateUser = () => {
         <i className='fas fa-arrow-left text-gray-600 cursor-pointer font-bold text-xl hover:text-gray-900' />
         USUARIOS
       </Link> 
-      <h1 className='m-4 text-3xl text-gray-800 font-bold text-center'>Editar Usuario</h1> 
+      <h1 className='m-4 text-3xl text-gray-800 font-bold text-center'>EDITAR USUARIO</h1><hr/><br/> 
       <form
         onSubmit={submitForm}
         onChange={updateFormData}
@@ -72,34 +72,34 @@ const UpdateUser = () => {
         className='flex flex-col items-center justify-center'
       >
         <Input
-          label='Nombre de la persona:'
+          label='Nombre de la persona: '
           type='text'
           name='name'
           defaultValue={queryData.User.name}
           required={true}
-        />
+        /><br/>
         <Input
-          label='Apellido de la persona:'
+          label='Apellido de la persona: '
           type='text'
           name='lastName'
           defaultValue={queryData.User.lastName}
           required={true}
-        />
+        /><br/>
         <Input
-          label='Correo de la persona:'
+          label='Correo de la persona: '
           type='email'
           name='email'
           defaultValue={queryData.User.email}
           required={true}
-        />
+        /><br/>
         <DropDown
-          label='Estado de la persona:'
+          label='Estado de la persona: '
           name='status'
           defaultValue={queryData.User.status}
           required={true}
           options={Enum_statusUser}
-        />
-        <span>Rol del usuario: {queryData.User.role}</span>
+        /><br/>
+        <span>Rol del usuario: {queryData.User.role}</span><br/>
         <ButtonLoading
           disabled={Object.keys(formData).length === 0}
           loading={mutationLoading}

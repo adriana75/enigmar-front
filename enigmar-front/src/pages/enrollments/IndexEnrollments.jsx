@@ -41,8 +41,8 @@ const IndexEnrollments = () => {
   
   return (
     <Container>
-      <h2 className="text-center mt-3">Datos inscripciones</h2>
-      <hr />
+      <h2 className="text-center mt-3">INSCRIPCIONES</h2>
+      <hr /><br/><br/>
 
       <Table striped hover fluid>
         <thead>
@@ -76,7 +76,7 @@ const IndexEnrollments = () => {
                           window.location.reload(false);
                         }}
                       >
-                        Aprobar Inscripción
+                        Aprobar
                       </Button>
                       )}
                     </td>
