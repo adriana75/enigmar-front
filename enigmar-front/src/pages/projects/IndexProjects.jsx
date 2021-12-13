@@ -43,6 +43,7 @@ const IndexProjects = () => {
             <th>Estado</th>
             <th>Fase</th>
             <th>Editar</th>
+            <th>Inscribirse</th>
             <th>Ver Avances</th>
             <th>Ingresar Avance</th>
           </tr>
@@ -74,6 +75,14 @@ const IndexProjects = () => {
                           >
                             Editar Proyecto
                       </Link>
+                    </td>
+                    <td>
+                    <Link
+                          to={`/inscripciones/crear/${p._id}`}
+                          className="btn btn-secondary mt-3 ms-3 mb-3"
+                        >
+                          Inscribirse
+                    </Link>
                     </td>
                     <td>
                       {p.advances && p.advances.length > 0 ?

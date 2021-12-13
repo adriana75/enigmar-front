@@ -65,6 +65,7 @@ const InputProject = () => {
       <div className='self-start'>
         <Link to='/proyectos'>
           <i className='fas fa-arrow-left' />
+          PROYECTOS
         </Link>
       </div>
       <h1 className='text-2xl font-bold text-gray-900'>Crear Nuevo Proyecto</h1>

@@ -14,18 +14,6 @@ const GET_USUARIOS = gql `
         password
         }
 
-        Students {
-            _id
-            email
-            documentId
-            name
-            lastName
-            fullName
-            role
-            status
-            password
-        }
-
         Pending {
             _id
             email
@@ -34,7 +22,22 @@ const GET_USUARIOS = gql `
             lastName
             role
             status
-            password
+            password 
+        }
+    }
+`;
+
+const GET_STUDENTS = gql `
+    query Query {
+        Students {
+        _id
+        email
+        documentId
+        name
+        lastName
+        role
+        status
+        password
         }
     }
 `;
@@ -64,4 +67,4 @@ query Query {
   }
 `;
 
-export {GET_USUARIOS, GET_USUARIO, GET_LIDER};
+export {GET_USUARIOS, GET_USUARIO, GET_LIDER, GET_STUDENTS};

@@ -16,6 +16,7 @@ import InputProject from "./pages/projects/inputProject";
 import InputAdvances from "./pages/advances/InputAdvance"
 import InputUser from "./pages/users/InputUser";
 import UpdateProject from "./pages/projects/UpdateProject";
+import InputEnrollment from "./pages/enrollments/InputEnrollment";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -40,6 +41,7 @@ function App() {
           <Route path="/proyectos/crear" element={<InputProject />} />
           <Route path="/proyectos/editar/:_id" element={<UpdateProject />} />
           <Route path="/inscripciones" element={<IndexE />} />
+          <Route path="/inscripciones/crear/:_id" element={<InputEnrollment />} />
           <Route path="/avances" element={<IndexA />} />
           <Route path="/avances/:_id" element={<IndexA />} />
           <Route path="/avances/crear/:_id" element={<InputAdvances />} />
