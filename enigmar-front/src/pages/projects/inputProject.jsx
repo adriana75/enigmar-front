@@ -55,6 +55,7 @@ const InputProject = () => {
     inputProject({
       variables: formData,
     });
+    window.location.reload(false);
   };
 
   if (loading) return <div>...Loading</div>;
