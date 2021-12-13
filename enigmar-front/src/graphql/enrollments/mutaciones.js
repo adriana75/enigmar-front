@@ -8,4 +8,26 @@ const APROBAR_INSCRIPCION = gql `
     }
   }
   `;
-  export {APROBAR_INSCRIPCION};
+
+const CREAR_INSCRIPCIÓN = gql`
+    mutation Mutation(
+        $project_id: String!, 
+        $user_id: String!) {
+        inputEnrollment(
+            project_id: $project_id, 
+            user_id: $user_id) {
+        _id
+        project_id {
+            _id
+            name
+        }
+        user_id {
+            _id
+            email
+        }
+        enrollmentDate
+        egressDate
+        }
+    }
+`;
+  export {APROBAR_INSCRIPCION, CREAR_INSCRIPCIÓN};
