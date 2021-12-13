@@ -52,6 +52,7 @@ const GET_USUARIO = gql `
         status
         documentId
         role
+        password
         }
     }
 `;

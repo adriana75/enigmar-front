@@ -6,14 +6,16 @@ const EDITAR_USUARIO = gql `
         $name: String!, 
         $lastName: String!, 
         $email: String!, 
-        $status: Enum_statusUser!, 
+        $status: Enum_statusUser!,
+        $password: String! 
         ) {
         userUpdate(
             _id: $id, 
             name: $name, 
             lastName: $lastName, 
             email: $email, 
-            status: $status, 
+            status: $status,
+            password: $password 
         ) {
         _id
         name
@@ -22,6 +24,7 @@ const EDITAR_USUARIO = gql `
         status
         documentId
         role
+        password
         }
     }
 `;

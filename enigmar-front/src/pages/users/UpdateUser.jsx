@@ -92,6 +92,13 @@ const UpdateUser = () => {
           defaultValue={queryData.User.email}
           required={true}
         /><br/>
+        <Input
+          label='Contraseña: '
+          type='text'
+          name='password'
+          defaultValue={queryData.User.password}
+          required={true}
+        /><br/>
         <DropDown
           label='Estado de la persona: '
           name='status'
