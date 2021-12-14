@@ -13,6 +13,12 @@ const IndexUsers = () => {
 
   return (
     <Container>
+      <div className='self-start'>
+        <Link to='/modulos'>
+          <i className='fas fa-arrow-left' />
+          HOME
+        </Link>
+      </div>
       <h2 className="text-center mt-3">USUARIOS REGISTRADOS</h2>
       <hr />
       <Table striped hover fluid>

@@ -20,6 +20,8 @@ import InputEnrollment from "./pages/enrollments/InputEnrollment";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Home from "./pages/Auth/Home";
+import Modulos from "./pages/Auth/Modulos";
 
 const httpLink = createHttpLink({
   uri: "http://localhost:4000/graphql",
@@ -36,6 +38,8 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/modulos" element={<Modulos />} />
           <Route path="/usuarios" element={<IndexU />} />
           <Route path="/proyectos" element={<IndexP />} />
           <Route path="/proyectos/crear" element={<InputProject />} />

@@ -19,13 +19,21 @@ const IndexProjects = () => {
 
   return (
     <Container>
+      <div className='self-start'>
+        <Link to='/modulos'>
+          <i className='fas fa-arrow-left' />
+          HOME
+        </Link>
+      </div>
     <Row>
-      <p><Link
+      <div>
+        <Link
         to={`/proyectos/crear/`}
         className="btn btn-secondary mt-3 ms-3 mb-3"
       >
         CREAR PROYECTO
-      </Link></p>
+      </Link>
+      </div>
       <h2 className="text-center mt-3">PROYECTOS REGISTRADOS</h2>
       <hr /><br/><br/>
       

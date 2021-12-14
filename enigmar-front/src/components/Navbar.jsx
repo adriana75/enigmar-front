@@ -16,11 +16,8 @@ const NavBar = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Link to="/" className="nav-link">
+            <Link to="/modulos" className="nav-link">
               Inicio
-            </Link>
-            <Link to="/usuarios/crear" className="nav-link">
-              Registrarse
             </Link>
             <Link to="/usuarios" className="nav-link">
               {" "}

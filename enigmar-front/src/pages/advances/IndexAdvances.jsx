@@ -20,6 +20,12 @@ const IndexAdvances = () => {
   return (
     
     <Container>
+      <div className='self-start'>
+        <Link to='/modulos'>
+          <i className='fas fa-arrow-left' />
+          HOME
+        </Link>
+      </div>
       <Link to='/proyectos'>
             <i className='fas fa-arrow-left text-gray-600 cursor-pointer font-bold text-xl hover:text-gray-900' />
             PROYECTOS
