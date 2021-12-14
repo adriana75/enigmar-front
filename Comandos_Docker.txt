@@ -1,0 +1,68 @@
+https://www.docker.com/
+Clases Daniel
+A partir de la clase 22
+https://www.youtube.com/watch?v=9GFw0oFTF_4&list=PLbN8v-issd2iUlVQ1HRoVAua0TjN40JyM&index=23&t=2855s
+
+Ejemplo para verificar que está funcionando
+docker run hello-world
+
+Listado de opciones comando run
+docker run --help
+
+cambiar el nombre al contenedor
+docker run --name <nuevo nombre> <nombre anterior>
+Ejemplo:
+docker run --name db mongo
+crear contenedor, cambiar nombre y dejar corriendo
+docker run -d --name db mongo
+
+mostrar contenedores ejecutándose
+docker ps
+
+mostrar los contenedores que están corriendo y los que dejaron de correr, con imagen, comando y estado 
+docker ps -a
+docker container ps -a
+
+revisar que tiene el contenedor
+docker inspect <nombre o id contenedor>
+
+Listar imagenes en pc
+docker image ls
+
+remover un contenedor
+docker rm <nombre contenedor>
+
+Forzar Remover contenedor
+docker rm -f <nombre contenedor>
+
+Remover todos los contenedores
+docker container prune
+
+Correr un contenedor de manera interactiva
+docker run -it <nombre contenedor>
+
+Salir del contenedor
+exit 
+
+Dejar corriendo el contenedor de Ubuntu
+docker run --name always-up -d ubuntu tail -f /dev/null
+Entrar al contenedor de Ubuntu
+docker exec -it always-up bash
+
+Listar Volumenes en Docker. Volumen es el almacenamiento - persistencia
+docker volume ls
+
+Crear un Volumen
+docker volume create <nombre volumen>
+
+Crear contenedor con imagen de Mongo, con nombre específico y usando volumen creado para persistencia de datos
+docker run -d --name db --mount src=dbdata,dst=/data/db mongo
+
+Crear una imagen a partir de un dockerfile
+docker build .
+
+Comandos Linux
+Mostrar versión de contenedor
+cat /etc/lsb-release
+Listar procesos que está ejecutando el contenedor por detrás
+ps -aux
