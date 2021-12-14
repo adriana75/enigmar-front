@@ -128,12 +128,12 @@ const DropDownOptions = ({ id, name, options, currentValue, mutation }) => {
     editarProyecto({
       variables: proyectoEdit,
     });
+    window.alert("El proyecto ha sido modificado con éxito");
   };
 
   useEffect(() => {
     if (formData.status != undefined) {
-      window.location.reload(false);
-      
+      window.location.reload(false);      
     }
   }, [dataMutation]);
 

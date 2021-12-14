@@ -36,6 +36,8 @@ const UpdateAdvances = () => {
         editarAvance({
             variables: { id: _id, ...formData },
         });
+        window.location.reload(false);
+        window.alert("El avance ha sido actualizado con éxito");
     };
 
     useEffect(() => {

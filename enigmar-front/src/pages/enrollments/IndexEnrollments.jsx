@@ -74,6 +74,7 @@ const IndexEnrollments = () => {
                           console.log(e._id)
                           cambiarEstadoInscripcion(e._id);
                           window.location.reload(false);
+                          window.alert("La inscripción ha sido aprobada");
                         }}
                       >
                         Aprobar

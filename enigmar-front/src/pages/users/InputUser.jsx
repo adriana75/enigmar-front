@@ -8,6 +8,7 @@ import useFormData from '../../hooks/useFormData';
 import { CREAR_USUARIO } from '../../graphql/users/mutations';
 import { Enum_Role } from '../../utils/enums';
 import { Table, Container, Button, Image, Row, Figure } from "react-bootstrap";
+import { ToastContainer, toast } from 'react-toastify';
 
 const InputUser = () => {
     const { form, formData, updateFormData } = useFormData();
@@ -21,10 +22,11 @@ useEffect(() => {
 
 const submitForm = (e) => {
     e.preventDefault();
-
     inputUser({
         variables: formData,
     });
+    window.location.reload(false);
+    window.alert("Ha sido registrado con éxito");
     };
 
 
@@ -45,7 +47,7 @@ const submitForm = (e) => {
             <Input name='lastName' label='Apellidos: ' required={true} type='text' /><br/>
             <Input name='password' label='Contraseña: ' required={true} type='text' /><br/>
             <DropDown label='Rol: ' options={Enum_Role} name='role' required={true} /><br/>
-            <ButtonLoading text='Registrarse' loading={false} disabled={false} />
+            <ButtonLoading text='Registrarse' loading={false} disabled={false}/>
             <hidden label= 'Estado' defaultValue= 'pending' name='status'/>
           </form>
         </div>

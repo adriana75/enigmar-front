@@ -34,6 +34,7 @@ const submitForm = (e) => {
         variables: {project_id:data.Project._id, ...formData},
     });
     window.location.reload(false);
+    window.alert("El avance ha sido creado con éxito");
 
     };
 

@@ -35,6 +35,8 @@ const UpdateProject = () => {
         editarProyecto({
           variables: { id: _id, ...formData },
         });
+        window.location.reload(false);
+        window.alert("El proyecto ha sido modificado con éxito");
       };
 
       useEffect(() => {

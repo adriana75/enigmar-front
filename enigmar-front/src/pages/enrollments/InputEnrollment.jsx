@@ -47,6 +47,7 @@ const InputEnrollment = () => {
             variables: {project_id:data.Project._id, user_id:data._id, ...formData},
         });
         window.location.reload(false);
+        window.alert("La inscripción ha sido creada con éxito");
     };
 
     if (loading) return <div>...Loading</div>;

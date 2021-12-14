@@ -56,6 +56,7 @@ const InputProject = () => {
       variables: formData,
     });
     window.location.reload(false);
+    window.alert("El proyecto ha sido registrado con éxito");
   };
 
   if (loading) return <div>...Loading</div>;

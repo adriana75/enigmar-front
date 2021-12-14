@@ -37,6 +37,8 @@ const UpdateUser = () => {
     editarUsuario({
       variables: { id: _id, ...formData },
     });
+    window.location.reload(false);
+    window.alert("El usuario ha sido modificado con éxito");
   };
 
   useEffect(() => {
