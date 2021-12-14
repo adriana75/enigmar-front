@@ -37,7 +37,7 @@ const IndexProjects = () => {
       <h2 className="text-center mt-3">PROYECTOS REGISTRADOS</h2>
       <hr /><br/><br/>
       
-      <Table striped hover fluid>
+      <Table striped hover fluid className='text-center'>
         <thead>
           <tr>
             <th>Nombre</th>

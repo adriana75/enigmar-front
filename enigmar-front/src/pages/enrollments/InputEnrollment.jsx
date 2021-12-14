@@ -62,7 +62,7 @@ const InputEnrollment = () => {
             </Link>
           </div>
           <h1 className='text-2xl font-bold text-gray-900 text-center'>SOLICITAR INSCRIPCIÓN</h1><hr/><br/>
-          <form ref={form} onChange={updateFormData} onSubmit={submitForm}>
+          <form ref={form} onChange={updateFormData} onSubmit={submitForm}  className='text-center'>
               <input label='Proyecto: ' defaultValue ={data.Project.name} name='name' disabled /><br/>
               <DropDown label='Estudiante: ' options={listStudents} name='user_id' required={true} /><br/>
               <Input name='enrollmentDate' label='Fecha de Inscripción: ' required={true} type='date' /><br/>

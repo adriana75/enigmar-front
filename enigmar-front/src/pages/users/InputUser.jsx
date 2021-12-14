@@ -40,7 +40,7 @@ const submitForm = (e) => {
           </div>
           <h1 className='text-2xl font-bold text-gray-900 text-center'>REGISTRARSE</h1>
           <hr/><br/>
-          <form ref={form} onChange={updateFormData} onSubmit={submitForm}>
+          <form ref={form} onChange={updateFormData} onSubmit={submitForm} className='text-center'>
             <Input name='email' label='Correo electrónico: ' required={true} type='text' /><br/>
             <Input name='documentId' label='Documento de Identidad: ' required={true} type='text' /><br/>
             <Input name= 'name' label='Nombre: ' required={true} type='text'/><br/>

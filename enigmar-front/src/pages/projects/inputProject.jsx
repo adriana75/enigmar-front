@@ -69,9 +69,9 @@ const InputProject = () => {
           <i className='fas fa-arrow-left' />
           PROYECTOS
         </Link>
-      </div>
+      </div >
       <h1 className='text-2xl font-bold text-gray-900 text-center'>NUEVO PROYECTO</h1><hr/><br/>
-      <form ref={form} onChange={updateFormData} onSubmit={submitForm}>
+      <form ref={form} onChange={updateFormData} onSubmit={submitForm}   className='text-center'>
         <div>
           <Input name='name' label='Nombre del Proyecto: ' required={true} type='text' /><br/>
           <Input name='budget' label='Presupuesto del Proyecto: ' required={true} type='number' /><br/>

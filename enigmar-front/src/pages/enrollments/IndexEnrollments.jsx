@@ -54,7 +54,7 @@ const IndexEnrollments = () => {
       <h2 className="text-center mt-3">INSCRIPCIONES</h2>
       <hr /><br/><br/>
 
-      <Table striped hover fluid>
+      <Table striped hover fluid  className='text-center'>
         <thead>
           <tr>
             <th>Nombre del Proyecto</th>

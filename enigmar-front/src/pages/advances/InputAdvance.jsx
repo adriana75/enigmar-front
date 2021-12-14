@@ -50,7 +50,7 @@ const submitForm = (e) => {
             </Link>
           </div>
           <h1 className='text-2xl font-bold text-gray-900'>CREAR AVANCE</h1><hr/><br/>
-          <form ref={form} onChange={updateFormData} onSubmit={submitForm}>
+          <form ref={form} onChange={updateFormData} onSubmit={submitForm}  className='text-center'>
             <input label='Proyecto: ' defaultValue ={data.Project.name} name='name' disabled /><br/>
             <hidden label='Proyecto' defaultValue ={data.Project._id} name='project_id'/>
             <Input name='addDate' label='Fecha de Avance: ' required={true} type='date' /><br/>

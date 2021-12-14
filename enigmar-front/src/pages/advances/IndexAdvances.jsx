@@ -32,7 +32,7 @@ const IndexAdvances = () => {
       </Link>
       <h2 className="text-center mt-3">AVANCES</h2>
       <hr /><br/><br/>
-      <Table striped hover fluid>
+      <Table striped hover fluid  className='text-center'>
         <thead>
           <tr>
             <th>Proyecto</th>

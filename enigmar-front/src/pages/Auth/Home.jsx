@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
     return (
         <div>
-            <Container>
+            <Container className='text-center'>
                 <form>
                     <div>
                         <h1 className='text-center'>SISTEMA DE GESTIÓN DE PROYECTOS DE INVESTIGACIÓN</h1><hr/><br/><br/>

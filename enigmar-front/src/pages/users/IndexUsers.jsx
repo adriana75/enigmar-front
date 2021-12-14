@@ -21,7 +21,7 @@ const IndexUsers = () => {
       </div>
       <h2 className="text-center mt-3">USUARIOS REGISTRADOS</h2>
       <hr />
-      <Table striped hover fluid>
+      <Table striped hover fluid  className='text-center'>
         <thead>
           <tr>
             <th>Email</th>

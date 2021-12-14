@@ -70,7 +70,7 @@ const UpdateAdvances = () => {
             onSubmit={submitForm}
             onChange={updateFormData}
             ref={form}
-            className='flex flex-col items-center justify-center'
+            className='flex flex-col items-center justify-center text-center'
         >
             <Input
             label='Fecha: '
