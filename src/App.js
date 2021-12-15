@@ -24,7 +24,7 @@ import Home from "./pages/Auth/Home";
 import Modulos from "./pages/Auth/Modulos";
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:4000/graphql",
+  uri: "https://back-enigmar.herokuapp.com/graphql",
 });
 
 const client = new ApolloClient({
