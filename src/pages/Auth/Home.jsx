@@ -10,7 +10,7 @@ const Home = () => {
             <Container className='text-center'>
                 <form>
                     <div>
-                        <h1 className='text-center'>SISTEMA DE GESTIÓN DE PROYECTOS DE INVESTIGACIÓN</h1><hr/><br/><br/>
+                        <h1 className='text-center'>SISTEMA DE GESTIÓN PARA PROYECTOS DE INVESTIGACIÓN</h1><hr/><br/><br/>
                         <h2 className='text-center'>INGRESAR</h2><br/><br/>
                         <Input name='email' label='Correo electrónico: ' required={true} type='text' /><br/>
                         <Input name='password' label='Contraseña: ' required={true} type='text' /><br/>
