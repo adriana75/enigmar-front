@@ -6,7 +6,7 @@ const Modulos = () => {
     return (
 
         <div className="mt-20">
-            <h1 className="text-center">SISTEMA DE GESTIÓN DE PROYECTOS DE INVESTIGACIÓN</h1><hr/><br/><br/><br/>
+            <h1 className="text-center">SISTEMA DE GESTIÓN PARA PROYECTOS DE INVESTIGACIÓN</h1><hr/><br/><br/><br/>
             <ul className="list-inline text-center">
                 <Row>
                 <li className="mb-4 list-unstyled list-inline-item">
