@@ -136,7 +136,13 @@ const DropDownOptions = ({ id, name, options, currentValue, mutation }) => {
     editarProyecto({
       variables: proyectoEdit,
     });
-    window.alert("El proyecto ha sido modificado con éxito");
+    if (name == "status") {
+      window.alert("El estado del proyecto ha sido modificado con éxito");
+
+    }
+    else {
+      window.alert("La fase del proyecto ha sido modificado con éxito");
+    }
   };
 
   useEffect(() => {
