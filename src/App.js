@@ -36,9 +36,10 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
+        
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
+        <Routes>     
+          <Route path="/" element={<Home />} /> 
           <Route path="/modulos" element={<Modulos />} />
           <Route path="/usuarios" element={<IndexU />} />
           <Route path="/proyectos" element={<IndexP />} />

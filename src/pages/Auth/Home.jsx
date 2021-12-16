@@ -9,8 +9,9 @@ import useFormData from '../../hooks/useFormData';
 const Home = () => {
     
     return (
+        
         <div>
-            <Container className='text-center'>
+            <Container className='text-center' >
                 <form name='formclave'>
                     <div>
                         <h1 className='text-center'>SISTEMA DE GESTIÓN PARA PROYECTOS DE INVESTIGACIÓN</h1><hr/><br/><br/>
