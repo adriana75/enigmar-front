@@ -23,9 +23,11 @@ const IndexProjects = () => {
 
   return (
     <Container fluid>
-      <div className="self-start">
-        <Link to="/modulos">
-          <i className="fas fa-arrow-left" />
+
+      <div className='self-start'>
+        <Link to='/modulos'>
+          <i className='fas fa-arrow-left' />
+
           HOME
         </Link>
       </div>
@@ -155,6 +157,7 @@ const DropDownOptions = ({ id, name, options, currentValue, mutation }) => {
     editarProyecto({
       variables: proyectoEdit,
     });
+
     //    window.alert("El proyecto ha sido modificado con éxito");
     if (name == "status") {
       Swal.fire({
@@ -176,6 +179,7 @@ const DropDownOptions = ({ id, name, options, currentValue, mutation }) => {
       });
       history("/proyectos");
       // window.alert("La fase del proyecto ha sido modificado con éxito");
+
     }
   };
 
