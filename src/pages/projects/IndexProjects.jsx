@@ -18,7 +18,7 @@ const IndexProjects = () => {
   }, [queryData]);
 
   return (
-    <Container>
+    <Container fluid>
       <div className='self-start'>
         <Link to='/modulos'>
           <i className='fas fa-arrow-left' />
