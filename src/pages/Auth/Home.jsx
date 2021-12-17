@@ -3,12 +3,16 @@ import { Table, Container, Button, Image, Row, Figure } from "react-bootstrap";
 import Input from '../../components/Input';
 import ButtonLoading from '../../components/ButtonLoading';
 import { Link } from "react-router-dom";
+import useFormData from '../../hooks/useFormData';
+
 
 const Home = () => {
+    
     return (
+        
         <div>
-            <Container className='text-center'>
-                <form>
+            <Container className='text-center' >
+                <form name='formclave'>
                     <div>
                         <h1 className='text-center'>SISTEMA DE GESTIÓN PARA PROYECTOS DE INVESTIGACIÓN</h1><hr/><br/><br/>
                         <h2 className='text-center'>INGRESAR</h2><br/><br/>
@@ -20,7 +24,9 @@ const Home = () => {
                 </form>
             </Container>
         </div>
-    )
-}
+    );
+
+    }     
+
 
 export default Home
