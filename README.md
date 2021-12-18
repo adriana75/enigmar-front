@@ -1,3 +1,7 @@
+Repositorio del equipo Enigma, grupos 10-11-12, ciclo 4a, Universidad de Antioquia.
+This repository was developed by Enigma team, University of Antioquia, during Mision TIC 2022. It contains the front-end of the project.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
